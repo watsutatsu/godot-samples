@@ -12,7 +12,7 @@ if [ ! -f "project.godot" ]; then
 fi
 
 # Check if the addons/gut/plugins.cfg exists and verify the version
-PLUGIN_CFG_PATH="${ROOT}/addons/gut/plugins.cfg"
+PLUGIN_CFG_PATH="${ROOT}/addons/gut/plugin.cfg"
 REQUIRED_VERSION="version=\"$GUT_VERSION\""
 
 if [ -f "$PLUGIN_CFG_PATH" ]; then

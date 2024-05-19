@@ -1,11 +1,20 @@
-on: [push]
+on: [push, pull_request]
 
 jobs:
-    fail:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v2
-            - name: Run tests
-              run: |
-                  echo "Tests failed"
-                  exit 1
+    ci:
+      runs-on: ubuntu-latest
+      container:
+        image: barichello/godot-ci:4.2.2
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+          with:
+            lfs: true
+        - name: 
+          run: |
+            tasks./ci.sh
+        - name: Upload Artifact
+          uses: actions/upload-artifact@v4
+          with:
+            name: build
+            path: build
