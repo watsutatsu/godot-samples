@@ -1,5 +1,7 @@
 #!/bin/bash
 
+find . -type f
+
 GUT_VERSION="9.2.1"
 
 # Ensure that the current working directory is the root of the project for Godot
@@ -43,5 +45,8 @@ mv "${TEMP_DIR}/Gut-${GUT_VERSION}"/* "$ADDONS_DIR"
 
 # Clean up
 rm -rf "$TEMP_DIR" "$GUT_ZIP"
+
+find . -type f
+
 
 echo "Gut version ${GUT_VERSION} has been installed successfully."
