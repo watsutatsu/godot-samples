@@ -13,7 +13,7 @@ tasks/download_addons.sh
 ```
 
 ## Running Tests
-> [!INFO]
+> [!NOTE]
 > For the full usage documentation for GUT see the documentation https://gut.readthedocs.io/en/latest/Command-Line.html
 
 
