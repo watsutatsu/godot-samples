@@ -24,7 +24,7 @@ tasks/run_gut_tests.sh
 or
 
 ```shell
-godot --headless -s addons/gut/gut_cmdln.gd -d --path "$PWD" -gtest=res://test/unit/sample_tests.gd -glog=1 -gexit
+godot --headless -s addons/gut/gut_cmdln.gd -d --path "$PWD" -gdir=res://test/unit -glog=1 -gexit
 ```
 
 ## Debugging with docker
